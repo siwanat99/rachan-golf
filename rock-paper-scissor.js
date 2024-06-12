@@ -59,8 +59,9 @@ let score = JSON.parse(localStorage.getItem
         score.ties += 1;
     }
 
-     if (score.losses === 3) {
-      alert('You lose บักควยกอฟ')  
+    if (score.losses === 3) {
+        document.getElementById('losses-message').innerText = 'You lose บักควยกอฟ';
+        document.getElementById('losses-message').style.display = 'block';
     }
 
     localStorage.setItem('score', JSON.stringify(score));
